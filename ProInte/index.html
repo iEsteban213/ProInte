@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruty - Tienda de Frutas</title>
+    <!-- Solo estructura HTML, sin CSS ni JS -->
+</head>
+<body>
+    <!-- Header con logo y navegación -->
+    <header>
+        <div class="logo">
+            <h1>Fruty</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner con llamado a la acción -->
+    <section id="home" class="hero-banner">
+        <div class="hero-content">
+            <h2>Las frutas más frescas, directo a tu hogar</h2>
+            <p>Productos 100% naturales, cultivados con amor y tradición</p>
+            <a href="#shop" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+        <h2>Categorías Destacadas</h2>
+        <div class="categories-grid">
+            <div class="category-item">
+                <h3>Category 1</h3>
+                <p>Frutas cítricas</p>
+            </div>
+            <div class="category-item">
+                <h3>Category 2</h3>
+                <p>Frutas tropicales</p>
+            </div>
+            <div class="category-item">
+                <h3>Category 3</h3>
+                <p>Frutas del bosque</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <h2>Productos Destacados</h2>
+        <article class="product-details">
+            <h3>Product Name</h3>
+            <p class="price">$XX.XX</p>
+            <p class="description">Descripción breve del producto</p>
+            <div class="customer-reviews">
+                <h4>Customer Reviews</h4>
+                <p>⭐⭐⭐⭐☆ (4.5/5 - 12 reseñas)</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Latest News -->
+    <section class="latest-news">
+        <h2>Últimas Noticias</h2>
+        <article class="news-item">
+            <h3>News Headline 1</h3>
+            <p>Resumen de la noticia 1 sobre Fruty y sus productos.</p>
+        </article>
+        <article class="news-item">
+            <h3>News Headline 2</h3>
+            <p>Resumen de la noticia 2 sobre promociones y novedades.</p>
+        </article>
+        <article class="news-item">
+            <h3>News Headline 3</h3>
+            <p>Resumen de la noticia 3 sobre eventos y agricultura local.</p>
+        </article>
+    </section>
+
+    <!-- Product Page (detalle completo) -->
+    <section class="product-page">
+        <div class="product-detail">
+            <h2 class="product-name">Product Name: <span>$XX.XX</span></h2>
+            <p class="product-description">Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            
+            <!-- Selector de tamaño -->
+            <div class="product-size">
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="small">Pequeño</option>
+                    <option value="medium">Mediano</option>
+                    <option value="large">Grande</option>
+                </select>
+            </div>
+            
+            <!-- Selector de cantidad -->
+            <div class="product-quantity">
+                <label for="quantity">Quantity:</label>
+                <button type="button" aria-label="Decrease quantity">-</button>
+                <input type="number" id="quantity" name="quantity" value="1" min="1" max="99">
+                <button type="button" aria-label="Increase quantity">+</button>
+            </div>
+            
+            <!-- Botones de acción -->
+            <div class="product-actions">
+                <button type="button" class="add-to-cart">Add to Cart</button>
+                <button type="button" class="add-to-wishlist">Add to Wishlist</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <section class="shopping-cart">
+        <h2>Carrito de Compras</h2>
+        
+        <!-- Producto en el carrito -->
+        <div class="cart-item">
+            <h3>Product</h3>
+            <p>Product Name: <span class="product-name">Manzana Roja</span> <span class="product-price">$XX.XX</span></p>
+            <p>Price: <span class="item-price">$XX.XX</span></p>
+            <div class="cart-item-quantity">
+                <label>Quantity:</label>
+                <button type="button" aria-label="Decrease quantity">-</button>
+                <span>1</span>
+                <button type="button" aria-label="Increase quantity">+</button>
+                <button type="button" aria-label="Remove item">🗑️</button>
+            </div>
+        </div>
+        
+        <!-- Billing Information -->
+        <div class="billing-info">
+            <h3>Billing Information</h3>
+            <form>
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Shipping Method -->
+        <div class="shipping-method">
+            <h3>Shipping Method</h3>
+            <form>
+                <div class="radio-group">
+                    <input type="radio" id="standard" name="shipping" value="standard" checked>
+                    <label for="standard">Standard Shipping</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="express" name="shipping" value="express">
+                    <label for="express">Express Shipping</label>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Cart Actions -->
+        <div class="cart-actions">
+            <button type="button" class="update-cart">Update Cart</button>
+            <button type="button" class="continue-shopping">Continue Shopping</button>
+            <button type="button" class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <!-- Checkout Page (pago) -->
+    <section class="checkout-page">
+        <h2>Finalizar Compra</h2>
+        
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-item">
+                <span>Items:</span>
+                <span>$XXX.XX</span>
+            </div>
+            <div class="summary-item">
+                <span>Shipping:</span>
+                <span>$X.XX</span>
+            </div>
+            <div class="summary-item total">
+                <span>Total:</span>
+                <span>$XXX.XX</span>
+            </div>
+        </div>
+        
+        <!-- Payment Information -->
+        <div class="payment-info">
+            <h3>Payment Information</h3>
+            <form>
+                <div class="form-group">
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date:</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YYYY">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+                    </div>
+                </div>
+                
+                <button type="submit" class="place-order">Confirmar Pago</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Fruty</h4>
+                <p>Frutas frescas con tradición familiar</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Fruty - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
